@@ -139,7 +139,7 @@ int did=d.getId();
         const donorEmail = "<%= email %>";
         const donorId = <%= did %>;
 
-        const response = await fetch("http://localhost:2004/createOrder", {
+        const response = await fetch("https://helpbridgeoficial.up.railway.app/createOrder", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -166,7 +166,7 @@ int did=d.getId();
             "description": "order for Test",
             "order_id": order.razorpayOrderId,
             "reciept": order.email,
-            "callback_url": "http://localhost:2004/paymentCallback",
+            "callback_url": "https://helpbridgeoficial.up.railway.app/paymentCallback",
             "prefill": {
                 "name": order.name,
                 "email": order.email
